@@ -6,7 +6,7 @@ const groupList = document.getElementById('groupList');
 const errorMessage = document.getElementById('errorMessage');
 
 generateBtn.addEventListener('click', generateGroups);
-exportBtn.addEventListener('click', exportToCsv);
+exportBtn.addEventListener('click', exportToTxt);
 
 function generateGroups() {
     const names = nameInput.value.split(',').map(name => name.trim());
@@ -46,24 +46,7 @@ function generateGroups() {
     hideError();
 }
 
-// function exportToTxt() {
-//     const groups = groupList.children;
-//     let txt = '';
-
-//     for (let i = 0; i < groups.length; i++) {
-//         txt += groups[i].textContent + '\n';
-//     }
-
-//     const blob = new Blob([txt], { type: 'text/plain' });
-//     const url = URL.createObjectURL(blob);
-//     const a = document.createElement('a');
-//     a.href = url;
-//     a.download = 'groups.txt';
-//     a.click();
-//     URL.revokeObjectURL(url);
-// }
-
-function exportToCsv() {
+function exportToTxt() {
     const groups = groupList.children;
     let csv = '';
 
