@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Group Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm2KWHnVi0VS1qxy/MVYR9V/SpNMfzjc5XVmPVyQBOLFxi2wxJkhTPRBk9MIHcrBOH3fm/G62PED4jVFOtvw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Random Group Generator</h1>
+    <div class="container">
+        <div class="input-section">
+            <h2><i class="fas fa-users"></i> Enter Names</h2>
+            <textarea id="nameInput" placeholder="Enter names separated by commas"></textarea>
+            <div class="input-group">
+                <label for="groupCount">Number of Groups:</label>
+                <input type="number" id="groupCount" min="2" value="2">
+            </div>
+            <button id="generateBtn" class="btn"><i class="fas fa-random"></i> Generate Groups</button>
+            <button id="exportBtn" class="btn"><i class="fas fa-file-export"></i> Export Txt</button>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+        <div class="output-section">
+            <h2><i class="fas fa-list-ol"></i> Generated Groups</h2>
+            <div id="groupList"></div>
+        </div>
+    </div>
+    <footer>
+        <p>Created by Angel Milla</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
